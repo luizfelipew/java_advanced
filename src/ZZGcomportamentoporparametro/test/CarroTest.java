@@ -78,19 +78,24 @@ public class CarroTest {
         System.out.println(filtrarCarros(carros, new CarrosCorVerdePredicate()));
         System.out.println(filtrarCarros(carros, new CarrosDezAnosRecentePredicate()));
 
+//
+//        System.out.println(filtrar(carros, new Predicate<Carro>() {
+//            @Override
+//            public boolean test(Carro carro) {
+//                return carro.getCor().equals("verde");
+//            }
+//        }));
+//
+//        System.out.println(filtrar(numeros, new Predicate<Integer>() {
+//            @Override
+//            public boolean test(Integer integer) {
+//                return integer % 2 == 0;
+//            }
+//        }));
 
-        System.out.println(filtrar(carros, new Predicate<Carro>() {
-            @Override
-            public boolean test(Carro carro) {
-                return carro.getCor().equals("verde");
-            }
-        }));
 
-        System.out.println(filtrar(numeros, new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer integer) {
-                return integer % 2 == 0;
-            }
-        }));
+        System.out.println(filtrar(carros, carro -> carro.getCor().equals("verde")));
+
+        System.out.println(filtrar(numeros, integer -> integer % 2 == 0));
     }
 }
