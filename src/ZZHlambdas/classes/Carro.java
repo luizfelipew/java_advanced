@@ -2,7 +2,7 @@ package ZZHlambdas.classes;
 
 public class Carro {
 
-    private String nome = "cruse";
+    private String nome = "cruze";
     private String cor;
     private int ano;
 
